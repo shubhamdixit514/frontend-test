@@ -1,29 +1,23 @@
+import React, { useCallback, useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import React, { useCallback, useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Feed from "../../components/Feed/Feed";
 import FullScreenDialog from "../../components/FullScreenDialog/FullScreenDialog";
 import Loader from "../../components/Loader/Loader";
 import { BASE_URL } from "../../utils/Utils";
-
-const StyledBox = styled(Box)({
-  display: "flex",
-  height: "100%",
-  justifyContent: "center",
-  overflow: "auto",
-});
+import { CustomBox } from "./style";
+import { ProductWithAds } from "../../utils/type";
 
 const DashBoard = () => {
-  const [items, setItems] = useState<any>([]);
-  const [comments, setComments] = useState<any>([]);
+  const [items, setItems] = useState([]);
+  const [comments, setComments] = useState([]);
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [selectedId, setSelectedId] = useState(null);
-  console.log("comments", items);
 
-  const fetchData = useCallback(async (page) => {
+  const fetchData = useCallback(async (page: number) => {
     setIsLoading(true);
     try {
       const response = await fetch(`${BASE_URL}/feed/${page}`);
@@ -31,41 +25,42 @@ const DashBoard = () => {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      if (page === 1) {
-        setItems(data);
-      } else {
-        setItems((prevItems) => [...prevItems, ...data]);
-      }
-      setIsLoading(false);
+      setItems((prevItems) => (page === 1 ? data : [...prevItems, ...data]));
     } catch (error) {
       console.error("Error fetching data:", error);
+    } finally {
       setIsLoading(false);
     }
   }, []);
 
-  const fetchComments = async () => {
+  const fetchComments = useCallback(async () => {
     setIsLoading(true);
     try {
       const response = await fetch(`${BASE_URL}/comments/${selectedId}`);
-      console.log("selectedId", selectedId);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
       setComments(data);
-      setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching comments:", error);
+    } finally {
       setIsLoading(false);
     }
-  };
+  }, [selectedId]);
 
   useEffect(() => {
     fetchData(page);
     window.scrollTo(0, 0);
-  }, [page]);
+  }, [fetchData, page]);
 
-  const handleClickOpen = (id) => {
+  useEffect(() => {
+    if (selectedId !== null) {
+      fetchComments();
+    }
+  }, [selectedId, fetchComments]);
+
+  const handleClickOpen = (id: React.SetStateAction<null>) => {
     setSelectedId(id);
     setOpen(true);
   };
@@ -74,17 +69,13 @@ const DashBoard = () => {
     setOpen(false);
   };
 
-  const filteredImages = items.find((item) => item.briefref === selectedId);
-
-  useEffect(() => {
-    if (selectedId !== null) {
-      fetchComments();
-    }
-  }, [selectedId]);
+  const filteredImages = items.find(
+    (item: ProductWithAds) => item.briefref === selectedId
+  );
 
   return (
     <>
-      <StyledBox>
+      <CustomBox>
         <InfiniteScroll
           dataLength={items.length}
           next={() => setPage(page + 1)}
@@ -99,7 +90,7 @@ const DashBoard = () => {
             ))
           )}
         </InfiniteScroll>
-      </StyledBox>
+      </CustomBox>
       <FullScreenDialog
         isOpen={open}
         handleClose={handleClose}
