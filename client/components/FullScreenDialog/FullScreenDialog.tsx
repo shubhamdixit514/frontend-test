@@ -1,7 +1,6 @@
-import React from "react";
-import Dialog from "@mui/material/Dialog";
-import IconButton from "@mui/material/IconButton";
 import { Avatar, Box, Divider, Typography } from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import React from "react";
 import Carousel from "../Carousel/Carousel";
 import {
   CustoHeaderText,
