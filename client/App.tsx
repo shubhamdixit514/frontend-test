@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import DashBoard from './views/DashBoard/DashBoard';
 
 function App() {
-
-
+  
   return (
     <div className="App">
+      <DashBoard />
     </div>
   );
 }

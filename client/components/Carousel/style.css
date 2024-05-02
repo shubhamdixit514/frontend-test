@@ -1,0 +1,30 @@
+.slider-container{
+  height: 98vh;
+  overflow: hidden;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+  color: white;
+}
+
+.custom-prev {
+  right: 10px;
+}
+
+.custom-next {
+  right: 10px;
+  top: 500px;
+}
+
+.image-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+}

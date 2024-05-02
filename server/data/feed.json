@@ -5,7 +5,7 @@
       "name": "Adidas",
       "logo": "http://localhost:4000/images/adidas-logo.png"
     },
-    "name": "",
+    "name": "Smith",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus odio et ante venenatis, non maximus quam placerat. Curabitur molestie sagittis odio et ultrices. Vivamus posuere, ipsum nec semper bibendum, quam diam tincidunt est, vitae molestie nibh odio ut eros. Pellentesque eget diam vel enim gravida euismod. In dapibus massa ac dignissim consectetur. Pellentesque sollicitudin orci in mi lacinia rutrum. Morbi a ullamcorper tellus. Phasellus facilisis tincidunt felis auctor pellentesque.",
     "feed_title": "What's your favourite shoes ?",
     "banner_text": "What's your favourite shoes ?",
@@ -20,7 +20,7 @@
       "name": "Burger King",
       "logo": "http://localhost:4000/images/burger-king-logo.png"
     },
-    "name": "",
+    "name": "John",
      "banner_image": "http://localhost:4000/images/bk-banner.jpeg",
     "description": "Donec volutpat accumsan fringilla. Sed in ante consectetur, gravida lectus non, iaculis mauris. Vivamus sed pretium odio, efficitur convallis mauris. Vestibulum bibendum libero metus, ac gravida ligula pretium eget. Nam ac mollis urna, vel accumsan massa. Donec non pellentesque velit. Morbi in tortor placerat erat semper dapibus sed eu ipsum. Integer ultricies dapibus tempor. Morbi quam risus, mollis et justo id, porttitor blandit ante. Nunc pretium orci a ultricies venenatis. Aliquam a tellus ut augue dictum venenatis. Sed at ex urna. Curabitur scelerisque varius libero quis pellentesque. Morbi laoreet, justo quis bibendum luctus, dolor massa interdum velit, a rutrum mi elit id nisl. Aliquam eu lacus purus.",
     "feed_title": "What's your favourite sandwich ?",
@@ -35,7 +35,7 @@
       "name": "Meta",
       "logo": "http://localhost:4000/images/fb-logo.png"
     },
-    "name": "",
+    "name": "Alex",
     "banner_image": "http://localhost:4000/images/fb-banner.jpeg",
     "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
     "feed_title": "What's your favourite social network ?",
@@ -50,7 +50,7 @@
       "name": "GMail",
       "logo": "http://localhost:4000/images/gmail-logo.png"
     },
-    "name": "",
+    "name": "Bill",
     "banner_image": "http://localhost:4000/images/gmail-banner.jpeg",
     "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
     "feed_title": "What's your favourite social mailbox ?",
@@ -65,7 +65,7 @@
       "name": "Nestle",
       "logo": "http://localhost:4000/images/nestle-logo.png"
     },
-    "name": "",
+    "name": "Addi",
     "banner_image": "http://localhost:4000/images/nestle-banner.jpg",
     "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
     "feed_title": "What's your favourite coffee ?",
@@ -80,7 +80,7 @@
       "name": "Pepsi",
       "logo": "http://localhost:4000/images/pepsi-logo.png"
     },
-    "name": "",
+    "name": "Robert frost",
     "banner_image": "http://localhost:4000/images/pepsi-banner.jpeg",
     "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
     "feed_title": "What's your favourite drink ?",
@@ -95,7 +95,7 @@
       "name": "Starbucks",
       "logo": "http://localhost:4000/images/starbucks-logo.png"
     },
-    "name": "",
+    "name": "Win",
     "banner_image": "http://localhost:4000/images/sb-banner.webp",
     "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
     "feed_title": "What's your favourite coffee ?",
@@ -110,7 +110,37 @@
       "name": "Audi",
       "logo": "http://localhost:4000/images/audi-logo.png"
     },
-    "name": "",
+    "name": "Alexa win",
+    "banner_image": "http://localhost:4000/images/audi-banner.jpeg",
+    "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
+    "feed_title": "What's your favourite car ?",
+    "banner_text": "What's your favourite car ?",
+    "ad_1_image": "http://localhost:4000/images/audi_ad1.jpeg",
+    "ad_2_image": "http://localhost:4000/images/audi_ad1.jpeg",
+    "starts_on": "2022-05-04 14:29:00"
+  },
+  {
+    "briefref": "brief-DD650C75-1401-11ED-B757-0A9E4A196C08",
+    "brand": {
+      "name": "Starbucks",
+      "logo": "http://localhost:4000/images/starbucks-logo.png"
+    },
+    "name": "Lobo let",
+    "banner_image": "http://localhost:4000/images/sb-banner.webp",
+    "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
+    "feed_title": "What's your favourite coffee ?",
+    "banner_text": "What's your favourite coffee ?",
+    "ad_1_image": "http://localhost:4000/images/sb_ad1.jpeg",
+    "ad_2_image": "http://localhost:4000/images/sb_ad1.jpeg",
+    "starts_on": "2022-09-03 14:29:00"
+  },
+  {
+    "briefref": "brief-DD650C75-1401-11ED-B757-0A9E4A196C09",
+    "brand": {
+      "name": "Audi",
+      "logo": "http://localhost:4000/images/audi-logo.png"
+    },
+    "name": "Lasika joh",
     "banner_image": "http://localhost:4000/images/audi-banner.jpeg",
     "description": "Praesent gravida, magna nec pellentesque lobortis, urna felis posuere nunc, id sodales odio neque nec urna. Aenean euismod rutrum quam, sed ullamcorper enim imperdiet id. Donec fermentum massa at odio varius facilisis. Aenean mattis sapien erat, et interdum sapien eleifend eu. Maecenas a dapibus ex. Praesent et leo semper, pharetra ligula eu, euismod mi. In ullamcorper lacinia iaculis. Integer dapibus libero nec augue hendrerit, vitae malesuada nunc suscipit. Nunc at commodo enim. Etiam a lacus euismod nunc elementum ornare. Maecenas ut purus finibus, semper dui porttitor, pulvinar ex. Donec ligula nibh, tincidunt rhoncus enim vel, vulputate iaculis sapien. Integer elementum elit nec ullamcorper pharetra. Quisque mattis nulla quis imperdiet mollis.",
     "feed_title": "What's your favourite car ?",
