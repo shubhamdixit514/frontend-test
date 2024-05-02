@@ -28,3 +28,11 @@
   height: 100%;
   background-color: black;
 }
+.image-container-second{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+}

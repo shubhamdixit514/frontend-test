@@ -6,9 +6,12 @@ import "./style.css";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import { Box } from "@mui/system";
+import { Avatar, Typography } from "@mui/material";
+import { formateDate } from "../../utils/Utils";
 
 const Carousel = ({ filteredImages }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  console.log('filteredImages.starts_on', filteredImages)
 
   const settings = {
     dots: false,
@@ -51,7 +54,7 @@ const Carousel = ({ filteredImages }) => {
       <Slider {...settings} afterChange={(index) => setCurrentSlide(index)}>
         <Box className="image-container">
           <img
-            src={filteredImages.ad_1_image}
+            src={filteredImages.banner_image}
             alt="slide-imgage"
             style={{
               width: "auto",
@@ -59,13 +62,57 @@ const Carousel = ({ filteredImages }) => {
             }}
           />
         </Box>
-        <Box className="image-container">
+        <Box className="image-container-second">
+          <Avatar aria-label="recipe" src={filteredImages?.brand.logo} sx={{
+            mt:4
+          }}/>
+          <Typography
+            aria-label="settings"
+            sx={{
+              color: "black",
+              fontWeight:900,
+              fontSize:"20px",
+              marginTop:"4px"
+            }}
+          >
+           {filteredImages.feed_title}
+          </Typography>
+          <Typography
+            aria-label="settings"
+            sx={{
+              p: 2,
+              color: "black",
+              fontSize:"14px",
+              fontWeight:600
+            }}
+          >
+           {formateDate(filteredImages.starts_on)}
+          </Typography>
+          <Typography
+            aria-label="settings"
+            sx={{
+              p: 2,
+              color: "black",
+              fontWeight:500
+            }}
+          >
+           {filteredImages.banner_text}
+          </Typography>
+          <img
+            src={filteredImages.ad_1_image}
+            alt="slide-imgage"
+            style={{
+              width: "auto",
+              height: "400px",
+              marginBottom:"10px"
+            }}
+          />
           <img
             src={filteredImages.ad_2_image}
             alt="slide-imgage"
             style={{
               width: "auto",
-              height: "922px",
+              height: "400px",
             }}
           />
         </Box>
