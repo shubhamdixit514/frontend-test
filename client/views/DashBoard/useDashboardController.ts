@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { ProductWithAds } from "../../utils/type";
-import { BASE_URL } from "../../utils/Utils";
+import { BASE_URL } from "../../utils/constant";
 
 export const useDashboardController = () => {
   const [items, setItems] = useState([]);
