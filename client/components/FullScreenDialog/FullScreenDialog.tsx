@@ -17,18 +17,20 @@ import {
   CustomRightPanel,
   CustomRightPanelBox,
 } from "./style";
-import { DailogTypes, UserData } from "./type";
+import { Comments, DailogTypes } from "./type";
 
-const Comment = ({ user, comment }) => (
-  <CustomCommentBox>
-    <CustomHeaderBox>
-      <Avatar aria-label="recipe" src={user.avatar} />
-      <CustoHeaderText aria-label="settings">{user.name}</CustoHeaderText>
-    </CustomHeaderBox>
-    <CustomCommentText aria-label="settings">{comment}</CustomCommentText>
-    <CustomLikeText aria-label="settings">Like</CustomLikeText>
-  </CustomCommentBox>
-);
+const Comment : FC<Comments>= ({ user, comment }) => {
+  return (
+    <CustomCommentBox>
+      <CustomHeaderBox>
+        <Avatar aria-label="recipe" src={user.avatar} />
+        <CustoHeaderText aria-label="settings">{user.name}</CustoHeaderText>
+      </CustomHeaderBox>
+      <CustomCommentText aria-label="settings">{comment}</CustomCommentText>
+      <CustomLikeText aria-label="settings">Like</CustomLikeText>
+    </CustomCommentBox>
+  )
+};
 
 const FullScreenDialog: FC<DailogTypes> = ({
   isOpen,
@@ -92,14 +94,9 @@ const FullScreenDialog: FC<DailogTypes> = ({
           </CustomDescription>
           <Divider />
           {comments &&
-            comments.map(
-              (
-                item: { user: UserData; comment: string },
-                index: React.Key | null | undefined
-              ) => (
-                <Comment key={index} user={item.user} comment={item.comment} />
-              )
-            )}
+            comments.map((item, index) => (
+              <Comment key={index} user={item.user} comment={item.comment} />
+            ))}
         </CustomRightPanel>
       </CustomCarouselOuter>
     </CustomDailogBox>

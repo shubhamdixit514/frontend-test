@@ -12,17 +12,17 @@ export interface User {
   avatar: string;
 }
 
-export interface Comment {
-  bcommentref: string;
-  briefref: string;
+export interface Comments {
+  bcommentref?: string;
+  briefref?: string;
   user: User;
   comment: string;
-  submitted_on: string;
+  submitted_on?: string;
 }
 
 export interface DailogTypes {
   isOpen: boolean;
   handleClose: () => void;
-  filteredImages: any;
-  comments: Comment[];
+  filteredImages?: items;
+  comments: Comments[];
 }

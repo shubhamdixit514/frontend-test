@@ -19,7 +19,6 @@ const DashBoard = () => {
     comments,
     open,
   } = useDashboardController();
-  console.log('filteredImages', filteredImages)
 
   return (
     <>
