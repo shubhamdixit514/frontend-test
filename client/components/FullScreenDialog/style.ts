@@ -14,7 +14,7 @@ const CustomCommentBox = styled(Box)({
 const CustomHeaderBox = styled(Box)({
   display: "flex",
   alignItems: "center",
-  gap: 2,
+  gap: "12px",
 });
 
 const CustoHeaderText = styled(Typography)({
@@ -27,15 +27,15 @@ const CustomCommentText = styled(Typography)({
   color: "#00000078",
   fontWeight: "700",
   fontSize: "14px",
-  margin: "0px 44px",
+  margin: "0px 52px",
   letterSpacing: "0.6px",
 });
 
 const CustomLikeText = styled(Typography)({
   color: "#00000078",
-  fontWeight: "700",
+  fontWeight: "400",
   fontSize: "12px",
-  margin: "0px 44px",
+  margin: "0px 52px",
   letterSpacing: "0.6px",
 });
 
@@ -83,6 +83,13 @@ const CustomRightPanelBox = styled(Box)({
 const CustomCommentWrapper = styled(Box)({
   color: "#00000099",
   fontWeight: "600",
+  margin:"0px 8px"
+});
+
+const CustomDescription = styled(Box)({
+  color: "#00000099",
+  fontWeight: "600",
+  margin:"4px 20px",
 });
 
 export{
@@ -97,5 +104,6 @@ export{
   CustomLeftPanel,
   CustomRightPanel,
   CustomRightPanelBox,
-  CustomCommentWrapper
+  CustomCommentWrapper,
+  CustomDescription
 };

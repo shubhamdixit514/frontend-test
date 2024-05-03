@@ -5,6 +5,7 @@ import FullScreenDialog from "../../components/FullScreenDialog/FullScreenDialog
 import Loader from "../../components/Loader/Loader";
 import { CustomBox } from "./style";
 import { useDashboardController } from "./useDashboardController";
+import { items } from "../../utils/type";
 
 const DashBoard = () => {
   const {
@@ -16,8 +17,10 @@ const DashBoard = () => {
     handleClose,
     filteredImages,
     comments,
-    open
+    open,
   } = useDashboardController();
+  console.log('filteredImages', filteredImages)
+
   return (
     <>
       <CustomBox>
@@ -30,7 +33,7 @@ const DashBoard = () => {
           {isLoading ? (
             <Loader />
           ) : (
-            items.map((item, index) => (
+            items && items.map((item: items, index: number) => (
               <Feed key={index} items={item} handleDailog={handleClickOpen} />
             ))
           )}

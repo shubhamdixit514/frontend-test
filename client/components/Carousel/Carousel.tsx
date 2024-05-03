@@ -72,7 +72,7 @@ const Carousel = ({ filteredImages }) => {
           />
         </CustomMediaBox>
         <CustomMediaSecondBox>
-          <CustomAvatar aria-label="recipe" src={filteredImages?.brand.logo} />
+          <CustomAvatar aria-label="recipe" src={filteredImages.brand.logo} />
           <CustomTypographyTitle>
             {filteredImages.feed_title}
           </CustomTypographyTitle>

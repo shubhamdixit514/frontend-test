@@ -1,6 +1,6 @@
-import { Avatar, Box, Divider, Typography } from "@mui/material";
+import { Avatar, Divider, Typography } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
-import React from "react";
+import React, { FC } from "react";
 import Carousel from "../Carousel/Carousel";
 import {
   CustoHeaderText,
@@ -9,6 +9,7 @@ import {
   CustomCommentText,
   CustomCommentWrapper,
   CustomDailogBox,
+  CustomDescription,
   CustomHeaderBox,
   CustomIconButton,
   CustomLeftPanel,
@@ -16,21 +17,20 @@ import {
   CustomRightPanel,
   CustomRightPanelBox,
 } from "./style";
+import { DailogTypes, UserData } from "./type";
 
 const Comment = ({ user, comment }) => (
   <CustomCommentBox>
     <CustomHeaderBox>
-      <Avatar aria-label="recipe" src={user?.avatar} />
-      <Box>
-        <CustoHeaderText aria-label="settings">{user?.name}</CustoHeaderText>
-      </Box>
+      <Avatar aria-label="recipe" src={user.avatar} />
+      <CustoHeaderText aria-label="settings">{user.name}</CustoHeaderText>
     </CustomHeaderBox>
     <CustomCommentText aria-label="settings">{comment}</CustomCommentText>
     <CustomLikeText aria-label="settings">Like</CustomLikeText>
   </CustomCommentBox>
 );
 
-const FullScreenDialog = ({
+const FullScreenDialog: FC<DailogTypes> = ({
   isOpen,
   handleClose,
   filteredImages,
@@ -77,18 +77,29 @@ const FullScreenDialog = ({
         </CustomLeftPanel>
         <CustomRightPanel>
           <CustomRightPanelBox>
-            <Avatar aria-label="recipe" src={filteredImages?.brand.logo} />
+            <Avatar
+              aria-label="recipe"
+              src={filteredImages && filteredImages.brand.logo}
+            />
             <CustomCommentWrapper>
               <Typography aria-label="settings">
-                {filteredImages?.brand?.name}
+                {filteredImages && filteredImages.brand.name}
               </Typography>
             </CustomCommentWrapper>
           </CustomRightPanelBox>
+          <CustomDescription aria-label="settings">
+            Lorem ipsum dolor sit amet.
+          </CustomDescription>
           <Divider />
           {comments &&
-            comments.map((item, index) => (
-              <Comment key={index} user={item.user} comment={item.comment} />
-            ))}
+            comments.map(
+              (
+                item: { user: UserData; comment: string },
+                index: React.Key | null | undefined
+              ) => (
+                <Comment key={index} user={item.user} comment={item.comment} />
+              )
+            )}
         </CustomRightPanel>
       </CustomCarouselOuter>
     </CustomDailogBox>

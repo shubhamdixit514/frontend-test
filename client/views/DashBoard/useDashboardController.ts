@@ -1,14 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
-import { ProductWithAds } from "../../utils/type";
+import { items } from "../../utils/type";
 import { BASE_URL } from "../../utils/constant";
+import { CommentType } from "./type";
 
 export const useDashboardController = () => {
-  const [items, setItems] = useState([]);
-  const [comments, setComments] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(1);
-  const [selectedId, setSelectedId] = useState(null);
+  const [items, setItems] = useState<items[]>([]);
+  const [comments, setComments] = useState<CommentType[]>([]);
+  const [open, setOpen] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [page, setPage] = useState<number>(1);
+  const [selectedId, setSelectedId] = useState<string>("");
 
   const fetchData = useCallback(async (page: number) => {
     setIsLoading(true);
@@ -19,10 +20,9 @@ export const useDashboardController = () => {
       }
       const data = await response.json();
       setItems((prevItems) => (page === 1 ? data : [...prevItems, ...data]));
+      setIsLoading(false);
     } catch (error) {
       console.error("Error fetching data:", error);
-    } finally {
-      setIsLoading(false);
     }
   }, []);
 
@@ -35,10 +35,9 @@ export const useDashboardController = () => {
       }
       const data = await response.json();
       setComments(data);
+      setIsLoading(false);
     } catch (error) {
       console.error("Error fetching comments:", error);
-    } finally {
-      setIsLoading(false);
     }
   }, [selectedId]);
 
@@ -53,7 +52,7 @@ export const useDashboardController = () => {
     }
   }, [selectedId, fetchComments]);
 
-  const handleClickOpen = (id: React.SetStateAction<null>) => {
+  const handleClickOpen = (id: string) => {
     setSelectedId(id);
     setOpen(true);
   };
@@ -63,7 +62,7 @@ export const useDashboardController = () => {
   };
 
   const filteredImages = items.find(
-    (item: ProductWithAds) => item.briefref === selectedId
+    (item) => item.briefref === selectedId
   );
 
   return {
