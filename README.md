@@ -146,3 +146,27 @@ A comment is composed of:
 In the `/public` folder, you'll find 2 svgs you can use in your code:  
 - The closing of the fullscreen modal.   
 - Up/down arrows for scrolling through items.
+
+## Dev notes
+-Install dependencies
+```
+yarn
+```
+
+- Start backend
+```
+yarn run start:server
+```
+
+- Start Frontend
+```
+yarn run start:client
+```
+
+This should start the backend server at localhost:4000 and React dev server at localhost:3000
+
+## What could have been done in more time?
+-As mentioned, I have majorly spent 4-5 hours for this task and couldnt do more as I am all caught up in some urgent client P1/P2s these days. But within this framework I have tried to keep the code as standard as possible, although, in the short span of time everything cant be put up.
+-In case of more time I would have loved to add unit tests, linting and some more documentation. There could have been more code side improvement here and there.
+-I feel most comfortable in React and TypeScript may it be frontend or backend, and I am confident enough to achieve any functionality using these technologies.
+- I mostly use standard git strtagey with main, develop/integration and feature/bugfix/hotfix branches in majorly every project
