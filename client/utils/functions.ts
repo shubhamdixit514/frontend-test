@@ -1,4 +1,4 @@
-export const formateDate = (date) => {
+export const formatDate = (date) => {
   const newDate = new Date(date);
   const day = String(newDate.getDate()).padStart(2, "0");
   const month = String(newDate.getMonth() + 1).padStart(2, "0");

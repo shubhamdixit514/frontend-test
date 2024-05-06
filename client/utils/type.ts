@@ -1,4 +1,4 @@
-interface items {
+interface Items {
   briefref: string;
   brand: {
     name: string;
@@ -14,4 +14,4 @@ interface items {
   starts_on: string;
 }
 
-export { items };
+export { Items };

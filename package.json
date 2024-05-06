@@ -33,7 +33,8 @@
     "react-app-rewired": "^2.2.1"
   },
   "scripts": {
-    "start": "yarn run start:server & react-app-rewired start start",
+    "start": "yarn run start:server && react-app-rewired start",
+    "start:client": "react-app-rewired start",
     "start:server": "./node_modules/.bin/nodemon server/index.js",
     "build": "react-app-rewired start build",
     "test": "react-app-rewired start test",

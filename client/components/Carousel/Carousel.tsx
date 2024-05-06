@@ -14,7 +14,7 @@ import {
   CustomTypographyTitle,
   CustomUpArrow,
 } from "./style";
-import { formateDate } from "../../utils/helper";
+import { formatDate } from "../../utils/functions";
 
 const Carousel = ({ filteredImages }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -77,7 +77,7 @@ const Carousel = ({ filteredImages }) => {
             {filteredImages.feed_title}
           </CustomTypographyTitle>
           <CustomTypographyDate>
-            {formateDate(filteredImages.starts_on)}
+            {formatDate(filteredImages.starts_on)}
           </CustomTypographyDate>
           <CustomTypographyBannerText>
             {filteredImages.banner_text}

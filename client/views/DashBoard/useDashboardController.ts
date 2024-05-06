@@ -1,56 +1,40 @@
-import { useCallback, useEffect, useState } from "react";
-import { items } from "../../utils/type";
-import { BASE_URL } from "../../utils/constant";
+import { useEffect, useState } from "react";
+import { Items } from "../../utils/type";
 import { CommentType } from "./type";
+import { fetchComments, fetchData } from "../../api/fetchData";
 
 export const useDashboardController = () => {
-  const [items, setItems] = useState<items[]>([]);
+  const [items, setItems] = useState<Items[]>([]);
   const [comments, setComments] = useState<CommentType[]>([]);
   const [open, setOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
   const [selectedId, setSelectedId] = useState<string>("");
 
-  const fetchData = useCallback(async (page: number) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(`${BASE_URL}/feed/${page}`);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      setItems((prevItems) => (page === 1 ? data : [...prevItems, ...data]));
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }, []);
+  const callItems = async () => {
+    setIsLoading(true)
+    const items = await fetchData(page)
+    setItems((prevItems) => (page === 1 ? items : [...prevItems, ...items]));
+    setIsLoading(false)
+  }
 
-  const fetchComments = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(`${BASE_URL}/comments/${selectedId}`);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      setComments(data);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error fetching comments:", error);
+  const callComments = async () => {
+    setIsLoading(true)
+    const comments = await fetchComments(selectedId)
+    setComments(comments)
+    setIsLoading(false)
+  }
+
+  useEffect(() => {
+    callItems()
+    window.scrollTo(0, 0);
+  }, [page]);
+
+  useEffect(() => {
+    if (selectedId !== "") {
+      callComments()
     }
   }, [selectedId]);
-
-  useEffect(() => {
-    fetchData(page);
-    window.scrollTo(0, 0);
-  }, [fetchData, page]);
-
-  useEffect(() => {
-    if (selectedId !== null) {
-      fetchComments();
-    }
-  }, [selectedId, fetchComments]);
 
   const handleClickOpen = (id: string) => {
     setSelectedId(id);
@@ -61,9 +45,7 @@ export const useDashboardController = () => {
     setOpen(false);
   };
 
-  const filteredImages = items.find(
-    (item) => item.briefref === selectedId
-  );
+  const filteredImages = items.find((item) => item.briefref === selectedId);
 
   return {
     setPage,

@@ -5,7 +5,7 @@ import FullScreenDialog from "../../components/FullScreenDialog/FullScreenDialog
 import Loader from "../../components/Loader/Loader";
 import { CustomBox } from "./style";
 import { useDashboardController } from "./useDashboardController";
-import { items } from "../../utils/type";
+import { Items } from "../../utils/type";
 
 const DashBoard = () => {
   const {
@@ -32,7 +32,7 @@ const DashBoard = () => {
           {isLoading ? (
             <Loader />
           ) : (
-            items && items.map((item: items, index: number) => (
+            items && items.map((item: Items, index: number) => (
               <Feed key={index} items={item} handleDailog={handleClickOpen} />
             ))
           )}

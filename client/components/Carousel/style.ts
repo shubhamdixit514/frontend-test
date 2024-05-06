@@ -35,7 +35,7 @@ const CustomUpArrow = styled(Box)<{ disabled: boolean }>(
     transform: `rotate(177deg)`,
     position: "absolute",
     top: "44%",
-    left: "96.4%",
+    right: "0.9%",
     cursor: "pointer",
     zIndex: 1,
   })

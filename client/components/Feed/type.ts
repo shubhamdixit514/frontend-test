@@ -1,4 +1,4 @@
-import { items } from "../../utils/type";
+import { Items } from "../../utils/type";
 
 export interface FeedType {
   items: items;
