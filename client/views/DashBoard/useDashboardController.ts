@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Items } from "../../utils/type";
 import { CommentType } from "./type";
 import { fetchComments, fetchData } from "../../api/fetchData";
@@ -11,30 +11,30 @@ export const useDashboardController = () => {
   const [page, setPage] = useState<number>(1);
   const [selectedId, setSelectedId] = useState<string>("");
 
-  const callItems = async () => {
+  const callItems = useCallback(async () => {
     setIsLoading(true)
     const items = await fetchData(page)
     setItems((prevItems) => (page === 1 ? items : [...prevItems, ...items]));
     setIsLoading(false)
-  }
+  }, [page])
 
-  const callComments = async () => {
+  const callComments = useCallback(async () => {
     setIsLoading(true)
     const comments = await fetchComments(selectedId)
     setComments(comments)
     setIsLoading(false)
-  }
+  }, [selectedId])
 
   useEffect(() => {
     callItems()
     window.scrollTo(0, 0);
-  }, [page]);
+  }, [callItems]);
 
   useEffect(() => {
     if (selectedId !== "") {
       callComments()
     }
-  }, [selectedId]);
+  }, [selectedId, callComments]);
 
   const handleClickOpen = (id: string) => {
     setSelectedId(id);
